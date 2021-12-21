@@ -1,0 +1,21 @@
+#container-header{
+    text-align: center;
+}
+
+#container-logo{
+    background-color: #545763;
+    height: 135px;
+    /* background-color: #514a92; */
+}
+
+#container-menu{
+    background-color: #1e1e20;
+}
+
+.menu-button{
+    color: #FFF !important;
+}
+
+#logo{
+    size: 90px;
+}
