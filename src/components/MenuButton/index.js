@@ -8,16 +8,21 @@ import './style.css'
 
 function MenuButton(props) {
 
-    const {options, title} = props;
+    const {options, title,setData} = props;
 
     const [elements, setElements] = useState()
 
     const handleClick = (event) => {
-        console.log(event.currentTarget)
         setElements(event.currentTarget)
     };
 
     const handleClose = () => {
+        setElements(null);
+    };
+    const handleItemClick = (event) => {
+        fetch('http://hp-api.herokuapp.com/api/characters/house/' + event.currentTarget.innerText.toLowerCase())
+        .then(response => response.json())
+        .then(data => setData(data));
         setElements(null);
     };
     return(
@@ -33,7 +38,7 @@ function MenuButton(props) {
                 onClose={handleClose}
             >
             {
-                options.map( option => <MenuItem onClick={handleClose}>{option}</MenuItem> )
+                options.map( option => <MenuItem onClick={handleItemClick}>{option}</MenuItem> )
             }
             </Menu>
         </Box>
