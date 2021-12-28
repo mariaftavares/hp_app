@@ -3,7 +3,7 @@ import MenuButton from '../MenuButton';
 import Stack from '@mui/material/Stack';
 
 function Menu() {
-    const option = ['Sonseria','Lufa-Lufa'];
+    const option = ['Ravenclaw','Slytherin','Gryffindor','Hufflepuff'];
     const staff = ['Administração'];
     return(
         <Stack direction="row" justifyContent="center" alignItems="center"> 
