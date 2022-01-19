@@ -37,7 +37,9 @@ function MenuButton(props) {
                 open={Boolean(elements)}
                 onClose={handleClose}
             >
+            
             {
+                options.length >0 &&
                 options.map( option => <MenuItem onClick={handleItemClick}>{option}</MenuItem> )
             }
             </Menu>
